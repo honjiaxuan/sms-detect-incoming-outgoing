@@ -16,11 +16,14 @@ public class autoStart extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
+        
+        
+// check is it the correct intent action, incoming sms
         if (intent.getAction() != null) {
             String intentAction = intent.getAction();
             Log.d("tag1autostart1", intent.getAction() + ".");
             if (intentAction.equals("android.provider.Telephony.SMS_RECEIVED")) {
+                // if the intent action is incoming sms, then extract the info from the intent, show in log
                 for (SmsMessage message : Telephony.Sms.Intents.getMessagesFromIntent(intent)) {
                     if (message != null) {
                         add = message.getDisplayOriginatingAddress();

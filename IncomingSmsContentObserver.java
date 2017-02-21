@@ -1,7 +1,6 @@
 package com.sms.detect;
 
 import android.app.AlarmManager;
-import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.ContentResolver;
@@ -33,7 +32,7 @@ public class IncomingSmsContentObserver extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d("IncomingSmsContentObserver","service started");
+        Log.d("SmsContentObserver","service started");
         super.onStartCommand(intent,flags,startId);
         if (!initialized) {
             initializeService();

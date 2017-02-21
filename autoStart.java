@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.provider.Telephony;
 import android.telephony.SmsMessage;
-import android.telephony.TelephonyManager;
 import android.text.format.DateFormat;
 import android.util.Log;
 
@@ -26,7 +25,7 @@ public class autoStart extends BroadcastReceiver {
                 // if the intent action is incoming sms, then extract the info from the intent, show in log
                 for (SmsMessage message : Telephony.Sms.Intents.getMessagesFromIntent(intent)) {
                     if (message != null) {
-                        add = message.getDisplayOriginatingAddress();
+                        String add = message.getDisplayOriginatingAddress();
                         String msg = message.getDisplayMessageBody();
                         String date1 = DateFormat.format("yyMMdd,HH:mm:ss", message.getTimestampMillis()).toString();
                         String smsContent = "received sms from " + add + ". Content: " + msg + "." + "Date:" + date1 +".";

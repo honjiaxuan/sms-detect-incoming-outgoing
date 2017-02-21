@@ -11,6 +11,7 @@ Content observer will manually read the sms database and show the sms in log whe
 
 Remember to request following permission in android manifest.
 
-<uses-permission android:name="android.permission.RECEIVE_SMS"/> 
-<uses-permission android:name="android.permission.READ_SMS"/> 
+android.permission.RECEIVE_SMS 
+
+android.permission.READ_SMS 
 

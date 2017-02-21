@@ -9,10 +9,7 @@ import android.os.Handler;
 import android.text.format.DateFormat;
 import android.util.Log;
 
-import java.util.Arrays;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 
 /**
